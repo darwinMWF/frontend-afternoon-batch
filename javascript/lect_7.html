@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript lecture -7 // javscript events</title>
+    <style>
+      /* #third{
+            color: brown;
+        } */
+      span {
+        color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="1">learn javascript 1</p>
+    <h1 id="2">learn javascript 2</h1>
+    <h1 id="3">
+      <span>this is span</span>
+      learn javascript 3
+    </h1>
+    <h1 id="4">learn javascript 4</h1>
+
+    <button id="btn" onclick="alertSomeThing()">button</button>
+
+    <input
+      type="text"
+      value="mukesh"
+      oninput="writesomething()"
+      <!-- event
+      -
+      input
+      dene
+      k
+      liye -->
+      onkeypress="changeincolor()"
+      <!-- event
+      -
+      jab
+      key
+      press
+      ho -->
+      onblur="forblurEvent()"
+      <!-- event
+      jab
+      input
+      field
+      active
+      na
+      ho
+      tab -->
+    />
+
+    <script>
+      const title = document.getElementsByTagName("p")[0];
+      const input = document.querySelector("input");
+      const heading = document.getElementsByTagName("h1")[2];
+      const thirdTitle = document.getElementById("3");
+      const btn = document.getElementById("btn");
+
+      const newElemnt = document.createElement("p"); // create new element
+
+      console.log(title.innerHTML); //document k node(like p h1 tag etc) k andar ka text k liye
+      console.log(input.value); //input ki value l liye
+      let num = 25;
+      // console.log(`my age is ${num}`) // template litrel for string and value to mix
+
+      function alertSomeThing() {
+        prompt("enter value"); // user se value lene k liye
+      }
+
+      function writesomething() {
+        newElemnt.innerHTML = `${input.value}`; //new createdNode k andar value add krne k liye
+        document.getElementsByTagName("body")[0].append(newElemnt); //body k andar add krne k liye
+      }
+
+      function changeincolor() {
+        const mycolor = Math.floor(Math.random() * 16777215).toString(16); // random number generate k liye
+        heading.style.color = `#${mycolor}`; // style me color change krne k liye
+      }
+
+      function forblurEvent() {
+        console.log("hello"); // ye function call hoga jab blu wali event hongi
+      }
+
+      btn.addEventListener("click", (event) => {
+        console.log(event.target.innerHTML);
+      }); //events add krne k liye
+
+      // thirdTitle.innerText = "<span>my name is khan</span>"
+      // thirdTitle.innerHTML = "<span>my name is khan</span>"
+      // thirdTitle.appendChild(title)
+
+      // title.style.color ="green"
+      // heading.style.color = "red"
+    </script>
+  </body>
+</html>

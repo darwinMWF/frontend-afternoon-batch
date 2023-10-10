@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <link rel="preload" href="https://assets.nflxext.com/web/ffe/wp/signup/nmhp/nmhpFrameworkClient.js.9a82a8f….js" as="script">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Borel&family=Lilita+One&family=Lobster&family=Noto+Sans+Chorasmian&family=Nunito+Sans:wght@300&family=Roboto:wght@300;400&family=Rubik&display=swap" rel="stylesheet"> -->
+    <style>
+        /* h1{
+            color: red;
+        } */
+/* 
+        min-width
+        max-width */
+         /* @media screen and (min-width:200px){
+            h1{
+                color: yellow;
+            }
+        }
+
+       @media screen and (min-width:500px){
+            h1{
+                color: rgb(51, 198, 35);
+            }
+        } 
+        
+        @media screen and (min-width:1000px) {
+            h1{
+                color: rgba(15, 22, 210, 0.441);
+            }
+        } */
+
+        /* @media screen  and (min-width:200px) and (max-width:1000px){
+            h1{
+                color: orange;
+                text-align: center;
+            }
+        } */
+        /* @media screen and (max-width:500px){
+            h1{
+                color: green;
+            }
+        }
+        @media screen and (max-width:200px){
+            h1{
+                color: yellow;
+            }
+        } */
+
+    *{
+        background-color: black;
+        font-family:Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+         margin: 0;
+         padding:0;
+         box-sizing: border-box;
+    }
+
+     h1{
+        color:white;
+        font-weight: bolder;
+        text-align: center;
+        letter-spacing:.2rem;
+        
+        
+     }
+
+     p{
+        color: white;
+        text-align: center;
+        letter-spacing:.1rem;
+        font-size: 1.8rem;
+        margin-top: 1.2rem;
+     }
+
+     .img{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-top:2rem ;
+     }
+
+     img{
+        width:100%;
+     }
+
+
+     @media screen and (min-width:640px) {
+        .img{
+            margin-top: 1.5rem;
+        }
+
+        img{
+            width: 90%;
+        }
+
+
+
+     }
+
+     @media screen and (min-width:768px) {
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img{
+            width: 75%;
+        }
+        
+    }
+
+    @media screen and (min-width:1024px) {
+
+        .container{
+            flex-direction:row;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem;
+
+
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .text-content{
+            border: 2px solid white;
+            width: 60%;
+        }
+
+        .text-content p{
+            font-size: 2rem;
+            text-align: left;
+            line-height:1.2;
+            max-width:52ch;
+            margin-top: 10px;
+
+        }
+
+        .text-content h1{
+            font-size: 3rem;
+            text-align: left;
+        }
+
+        .img{
+            /* border: 2px solid white; */
+            width: 45%;
+        }
+
+        
+    }
+
+
+
+.para{
+    height: 200px;
+    /* width: 200px; */
+    border: 2px solid red;
+    overflow:auto;
+}
+
+
+
+
+
+       
+
+
+
+       
+
+
+    </style>
+</head>
+<body>
+    <!-- <h1>media query</h1> -->
+
+    <div class="container">
+        <div class="text-content">
+            <h1>ENJOY YOUR TV</h1>
+            <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+        <div class="img">
+            <img src="../images/eric-patterson-1.jpg" alt="img">
+        </div>
+    </div>
+
+    <div class="para">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi. Eligendi laboriosam similique nisi! Fugiat, saepe totam, earum maiores qui cum aut eum repellendus commodi pariatur recusandae aliquid veritatis? Sapiente?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi. Eligendi laboriosam similique nisi! Fugiat, saepe totam, earum maiores qui cum aut eum repellendus commodi pariatur recusandae aliquid veritatis? Sapiente?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi. Eligendi laboriosam similique nisi! Fugiat, saepe totam, earum maiores qui cum aut eum repellendus commodi pariatur recusandae aliquid veritatis? Sapiente?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, nisi. Eligendi laboriosam similique nisi! Fugiat, saepe totam, earum maiores qui cum aut eum repellendus commodi pariatur recusandae aliquid veritatis? Sapiente?</p>
+    </div>
+</body>
+</html>

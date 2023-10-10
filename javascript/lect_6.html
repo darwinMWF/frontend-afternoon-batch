@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom manipulation</title>
+    <style>
+        img{
+            width: 200px;
+        }
+
+        .firjsdivison{
+            background-color: azure;
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- document object model -->
+    <h1 id="heading1">dom manipulation</h1>
+    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ea, laborum, nesciunt veritatis tenetur reprehenderit molestias odio quae itaque optio maiores explicabo modi delectus officiis, nulla praesentium corporis iste. Fugiat.</p>
+    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ea, laborum, nesciunt veritatis tenetur reprehenderit molestias odio quae itaque optio maiores explicabo modi delectus officiis, nulla praesentium corporis iste. Fugiat.</p>
+    <p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit ea, laborum, nesciunt veritatis tenetur reprehenderit molestias odio quae itaque optio maiores explicabo modi delectus officiis, nulla praesentium corporis iste. Fugiat.</p>
+    <p class="paragraph" name="unorderlist">this is fourth paragraph</p>
+
+    <div class="container" style="border: 2px solid;">
+        <p>paragraph</p>
+        <ul name="unorderlist">
+            <li>abc</li>
+        </ul>
+    </div>
+
+
+
+    <!-- <div>two</div>
+    <div>three</div>
+    <div>fourth</div> -->
+
+    <script>
+        //web api  --> inbult functions
+        // console.log(document)
+        const heading = document.getElementById("heading1");
+        const para = document.getElementsByClassName("paragraph")[3];
+        const divison = document.getElementsByTagName("div")[0]
+        const elementWithName = document.getElementsByName("unorderlist")[1]
+        const list = document.querySelectorAll(".paragraph");
+        //create element uisng js
+        const newElementImage = document.createElement("img");
+        newElementImage.src = "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+        const appendNewelement = document.createElement("a")
+        appendNewelement.href = "*"
+        // appendNewelement.innerText = "<h1>this is anchor</h1>"
+        appendNewelement.innerHTML = "<h1>this is anchor</h1>"
+
+
+        // console.log(newElementImage.src)
+        // console.log(list)
+        // console.log(elementWithName)
+        // console.log(divison)
+
+        // console.log(para)
+        // console.log(heading)
+
+        heading.style.color="red";
+        heading.style.backgroundColor = "yellow";
+
+        // heading.remove()
+
+    // divison.removeChild(elementWithName)
+    //    console.log( divison.childNodes)
+    //    console.log( divison.children)
+    divison.replaceChild(newElementImage,elementWithName)
+    divison.classList.add("firjsdivison")
+    divison.classList.remove("container")
+
+    // add element at the end of a parent
+    divison.appendChild(appendNewelement)
+
+
+    //this replace ul with img tag
+
+        
+
+    </script>
+   
+</body>
+</html>

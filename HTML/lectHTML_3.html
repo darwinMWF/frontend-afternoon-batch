@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #firstdiv{
+            margin: 2px;
+            padding: 2px;
+            box-sizing: content-box;
+            width: 100px;
+            height:100px;
+            border: 2px solid red;
+        }
+
+
+        #seconddiv{
+            margin: 2px;
+            padding: 2px;
+            box-sizing:border-box;
+            /* width: 100px; */
+            height:100vh;
+            /* border: 2px solid red; */
+            border: 2px dashed green;
+            /* border-radius: 12px; */
+            border-top-right-radius:40px ;
+            /* background-color: cornflowerblue; */
+            /* background-image: linear-gradient(120deg,red 40%,orange 60%); */
+            /* background-image: radial-gradient(circle,red 39%, orange 96%); */
+            background-image: url(../images/eric-patterson-1.jpg);
+            background-position: center;
+            /* background-size:cover; */
+            /* background-repeat:repeat-x; */
+            background-repeat:no-repeat;
+            background-attachment:local;
+            background-size:200px;
+            /* clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%); */
+            
+
+        }
+
+        /* margin */
+        h1{
+            /* margin-top: 25px;
+            margin-right: 30px;
+            margin-bottom: 25px;
+            margin-left: 10px; */
+            /* top right bottom left */
+            /* margin:25px 30px 25px 10px; */
+            /* margin: 4px; */
+            /* top left-right bottom */
+            /* margin: 12px 30px 15px; */
+            /* top-bottom left-right */
+            margin: 25px 12px;
+            padding: 5px;
+            /* border-style:ridge;
+            border-color: chocolate;
+            border-width: 25px; */
+            border-right-style:solid;
+            border-top-style:ridge;
+            border-bottom-style: groove;
+            border-left-style: dashed;
+            border-color: blueviolet;
+            background-color: burlywood;
+            color: chartreuse;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <h1>Box model</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae pariatur molestiae eaque dignissimos debitis recusandae facilis doloremque veritatis voluptatum. Corporis illum suscipit in laborum asperiores quae rem animi voluptas aspernatur.</p> -->
+    <!-- <div class="name"></div> -->
+    <!-- <div id="firstdiv"></div> -->
+    <div id="seconddiv"></div>
+    <h1>Box model</h1>
+    <div style="border-radius: 50%; border:2px solid red; height: 100px; width: 100px; display: inline-block;"></div>
+</body>
+</html>

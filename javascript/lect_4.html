@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functions</title>
+  </head>
+  <body>
+    <script>
+      // number 100
+      // console.log("sum",(15*(15+1))/2)
+      
+
+      // create a function
+    //   function by defination
+      function sumOfNatural(num) {
+        let sum = 0;
+
+        for (let i = 1; i <= num; i++) {
+          sum += i;
+          //   if(i === 5){
+          //     return sum;
+          //   }
+        }
+        return [{ name: "mukesh", age: 24 }];
+        // console.log("sum of natural number:", sum);
+        //as break ki tarah work
+      }
+
+
+      
+      
+      const arry = [45, 12, 30, 78];
+      let a = 78;
+      
+      function changesInArry(brry,c) {
+        c = 90
+        console.log(c)
+        console.log(brry)
+          for(let j = 0; j<brry.length;j++){
+                brry[j] = "mukesh"
+          }
+            console.log("ye wala loop k andar ka he ",brry)
+            
+        }
+        
+        // pass by reference
+        // changesInArry(arry,a);
+        // console.log(a)
+    //   console.log("ye loop k bahar ka he",arry)
+      
+      
+      
+      
+      
+      
+      
+      //   void type function call
+      let output = sumOfNatural(100);
+    //   console.log(output);
+
+      //loop pure arry pr chlega
+    //   const crry = ["mukesh","naresh",45,23,56.22]
+      // for of loop for array
+    //   for (let i of crry) {
+    //     console.log(i);
+    //   }
+
+    //   const obj = {
+    //     creator:"harishchandra",
+    //     occupation:"king"
+    //   }
+    // for in for objects
+    //   for(let x in obj ){
+        //     console.log(x,"ki value",obj[x])
+        //   }
+        
+        
+
+
+      // sumOfNatural(50)
+
+      function interestofMoney(money,rate,year){
+         return (money*rate*year)/100
+      }
+
+      function biodata(name,age,occupation,moneykamata,ismarried){
+        console.log("name:",name);
+        console.log("age:",age)
+        console.log("occupation:",occupation)
+        console.log("moneykamata:",moneykamata)
+        console.log("ismarried:",ismarried) 
+      }
+
+      const myMoney = interestofMoney(1000,5,3)
+      const myMoney1 = interestofMoney(1050,5,3)
+      console.log(myMoney1)
+      biodata("mukesh",24,"software engineer","150$",false)
+    </script>
+  </body>
+</html>

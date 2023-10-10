@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class,inheritance</title>
+  </head>
+  <body>
+    <script>
+      const obj1 = {
+        name: "mukesh",
+        age: 25,
+      };
+
+      const obj2 = {
+        name: "sukesh",
+        age: 30,
+        work: () => {
+          console.log("i m doing software engineering");
+        },
+      };
+
+      obj2.work();
+
+      class personalInfo {
+        constructor(value1, value2) {
+          (this.name = value1), (this.age = value2); //propertires
+        }
+
+        driving() {
+          console.log("can driving");
+          //methods
+        }
+
+        //setter
+        set setage(age) {
+          this.age = age;
+        }
+
+        set setName(name) {
+          this.name = name;
+        }
+
+        //getter
+        get getage() {
+          return this.age;
+        }
+
+        get getName() {
+          return this.name;
+        }
+      }
+
+      const personOne = new personalInfo("mukesh", 25);
+      personOne.driving();
+      personOne.setName = "chandresh";
+      personOne.setage = 23;
+
+      console.log(personOne.getName);
+      console.log(personOne.getage);
+
+      const arry = [3, 4, 5, 1, 2]; //template litrel  //muttable
+      const brry = new Array(5);
+      brry[0] = 25;
+      brry[1] = 30;
+      arry.push(23);
+      arry.push(29);
+
+      arry.pop();
+      arry.pop();
+    //   arry.splice(2, 1, 0.5);
+    //   const crry = arry.slice(1,4);
+      const drry = arry.toReversed();
+      const frry = arry.map(function(value,index){
+            // console.log(value," ",index)
+            if(index%2 !== 0){
+                return "heloo"
+            }
+            return value + 1;
+      })
+
+      const filterArry = arry.filter(function(value){
+                if(value%2 !== 0){
+                    return value
+                }
+      })
+      const sortedArry = arry.toSorted((a,b)=>a-b)
+      console.log("sortedArry",sortedArry)
+      console.log("filter arry:",filterArry);
+      console.log("frry",frry);
+      console.log("arry",arry);
+    //   console.log("crry",crry);
+      console.log(drry)
+
+      // console.log()
+    </script>
+  </body>
+</html>

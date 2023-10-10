@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css intro</title>
+    <link rel="stylesheet" href="../CSS/lectHTML_2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Lilita+One&family=Lobster&family=Noto+Sans+Chorasmian&family=Nunito+Sans:wght@300&family=Roboto&family=Rubik&display=swap" rel="stylesheet">
+    <!-- internal css -->
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Noto+Sans+Chorasmian&family=Nunito+Sans:wght@300&family=Roboto&family=Rubik&display=swap'); */
+      
+       #heading{
+        color: red;
+        text-align: center;
+        background-color: chocolate;
+       }
+
+       .similar{
+        font-size: 1.6rem;
+       }
+
+       img[src]{
+        border: 2px solid red;
+        width: 100px;
+       }
+
+       img[src]:hover{
+        width: 200px;
+       
+       }
+
+       ul li .anchor{
+        color: #4e613f;
+       }
+       
+       .relativeunits{
+        font-size: 4em;
+       }
+
+       .relativeunits b{
+        font-size: 2rem;
+        font-family: 'Borel', cursive;
+       }
+
+       div{
+        border: 2px solid ;
+        height: 200%;
+        width: 50%;
+       }
+
+       .firstpara{
+
+        font-family: 'Borel', cursive;
+        font-size:1rem;
+        font-style:oblique;
+        font-weight:bolder;
+        letter-spacing: .2rem;
+        line-break:auto;
+        background-color: brown;
+        line-height:3.8%;
+       }
+
+       ul li{
+        background-color: brown;
+       }
+
+       a{
+        background-color: brown;
+        text-decoration: none;
+        text-transform:capitalize;
+       }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- inline css -->
+    <!-- <h1 style="color: brown;font-size: 4em;">css - cascading style sheet</h1> -->
+    <h1 id="heading"  class="similar">extrenal css</h1>
+    <p class="similar firstpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quam quia perspiciatis praesentium enim, facilis saepe laboriosam hic corporis natus sunt ratione, aspernatur ipsum accusantium itaque illum deleniti magnam dolorem!</p>
+    <ul>
+        <li  class="similar"><a href="" class="anchor">link</a></li>
+        <li  class="similar">orange</li>
+    </ul>
+
+    <p class="relativeunits">
+        Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>. Libero aspernatur molestias aliquid reprehenderit, ad voluptatibus eligendi. Incidunt quo aperiam veritatis ratione nemo eligendi, doloremque aliquid sit eius ex officiis atque!
+    </p>
+
+    <img src="../images/pngwing.com (3).png" alt="images">
+    <a href="">anchor</a>
+
+    <div>
+        <h1>hello division</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+
+
+/* li,p,h1{
+    font-size: 4rem;
+} */
+
+li{
+    list-style: none;
+    /* font-size: 2rem; */
+    font-weight: bold;
+
+}
+
+h1{
+    /* font-size: 4rem; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

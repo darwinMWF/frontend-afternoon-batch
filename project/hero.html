@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hero</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      nav {
+        display: flex;
+        /* border: 2px solid red; */
+        justify-content: center;
+        height: 54px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .alignment {
+        /* border: 2px solid; */
+        width: 992px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo a {
+        font-size: 2rem;
+        color: chocolate;
+        text-transform: capitalize;
+        text-shadow: .1em .1em 0 hsl(200 50% 30%);
+      }
+
+      ul li a {
+        text-transform: capitalize;
+        color: darkgray;
+      }
+
+      ul {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .hero{
+        height: 100vh;
+        /* border: 2px solid red; */
+      }
+
+      .heroalign{
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+      }
+
+      .text{
+        /* border: 2px solid green; */
+        width: 60%;
+        padding: 1.5rem 1.8rem 0;
+        /* height: 25rem; */
+      }
+
+      .img{
+        /* border: 2px solid green; */
+        width: 50%;
+        height: 30rem;
+        
+      }
+
+      img{
+        width: 100%;
+        /* border: 2px solid; */
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .default,.primary{
+        width: 120px;
+        height: 50px;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+        border-radius: 8px;
+      }
+
+      .primary{
+        background-color: #0d6efd;
+        color:white;
+        
+      }
+
+      .default{
+        border: 1px solid;
+        /* transition: ease-in-out; */
+        
+      }
+
+     
+
+      .btn{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.3rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .text h1{
+        font-size: 2.5rem;
+        letter-spacing: .1rem;
+        max-width: 20ch;
+      }
+
+      .text P{
+        font-size: 1.5rem;
+        font-weight: 100;
+        letter-spacing:.1rem;
+      }
+
+      .default:hover{
+        background-color: #6c757d;
+        color: white;
+      }
+
+      
+
+      
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="alignment">
+        <div class="logo"><a href="#">logo</a></div>
+        <ul>
+          <li><a href="">home</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">contact</a></li>
+          <li><a href="">help</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+        <div class="alignment heroalign">
+            <div class="text">
+                <h1>Responsive left-aligned hero with image</h1>
+                <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                <div class="btn">
+                    <div class="primary">
+                        <span>Primary</span>
+                    </div>
+                    <div class="default">
+                        <span>Default</span>
+                    </div>
+                </div>
+            </div>
+            <div class="img">
+                <img src="https://img.freepik.com/free-vector/designer-concept-illustration_114360-686.jpg?w=826&t=st=1691401169~exp=1691401769~hmac=929c40a9e0c31e4da980433b9921ff9caa3cee392b0a569975e7c2d881f538f9" alt="img">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>functons - 2</title>
+  </head>
+  <body>
+    <script>
+      // <!-- for in -->
+
+      const obj = {
+        name: "mukesh",
+        age: 24,
+        iseligible: true,
+        marks: [45, 12, 78, 56],
+        info: function () {
+          // annoniymus  function
+          return 10;
+        },
+        mydata: function () {
+          console.log("hello my name is mukesh");
+        },
+      };
+      const arry = [12, 34, 56];
+
+      //   console.log(obj.info());
+      // arry[1]
+      // x ek key jo ki ek object
+      //   for (let key in obj) {
+      //     if (key == "info") {
+      //       console.log("function call",obj[key]());
+      //     } else {
+      //       console.log(key, "ki value is: ", obj[key]);
+      //     }
+      //   }
+
+      // <!-- for of  --> array
+      //   for (let x of arry) {
+      //     if (x == 34) {
+      //       continue;
+      //     }
+      //     console.log(x);
+      //   }
+
+      const myBiodata = function () {
+        console.log("hello functions");
+      };
+
+      const sumOftwoNumber = function (num1, num2, num3) {
+        const answer = num1 + num2 + num3;
+        return answer;
+      };
+    
+      //arrow function
+      const multiplication = (num1,num2) => {
+        return num1*num2
+      }
+
+      const division = (num1,num2) => num1/num2 ;
+      const mymodule = (num,num2) => (num+num2)%2
+      myBiodata();
+      const result = sumOftwoNumber(12,23.256,78.9)
+      console.log("output",result)
+      console.log(sumOftwoNumber(10, 12, 13));
+
+      const output = multiplication(23,56);
+
+      console.log("multiplication result: ",output)
+
+      console.log(division(56,8))
+      console.log(mymodule(5,6))
+      
+
+
+    </script>
+  </body>
+</html>

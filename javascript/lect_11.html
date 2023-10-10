@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance</title>
+</head>
+<body>
+    <script>
+
+       const data = {
+            assests:10000000,
+            income:1200
+       }
+
+        class personalInfo{
+            constructor(name ,age,gender,contact){
+                this.name = name
+                this.age = age 
+                this.gender = gender,
+                this.contact = contact
+            }
+        }
+
+        class Assetdata{
+            constructor(income,assets){
+                this.income = income,
+                this.assets = assets
+            }
+        }
+
+        class healthInfo extends personalInfo{
+            constructor(name,age,gender,contact,bloodGroup){
+                super(name,age,gender,contact)
+                this.bloodGroup = bloodGroup;
+            }
+        }
+
+        Object.assign(healthInfo.prototype,new Assetdata(10000,25))
+
+        const obj = new healthInfo("mukesh",25,"male",9898712321,"AB+");
+
+        console.log(obj.income)
+    </script>
+</body>
+</html>

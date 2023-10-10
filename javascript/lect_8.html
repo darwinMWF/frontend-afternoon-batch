@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>repeat class events</title>
+  </head>
+  <body>
+    <!-- events
+   click 
+   change-input
+   blur
+   submit
+   focusin-out
+   error
+   load 
+   toggle
+   abort -->
+
+
+
+    <div class="container">
+      <h1>it is color will be change after input blur</h1>
+      <button id="btn">click me!</button>
+      <button id="btn-2" onclick="popUp(this)">
+        another way of calling event
+      </button>
+      <input
+        type="text"
+        id="inputfeild"
+        oninput="getInputdata(this)"
+        onfocus="onFocusInput(this)"
+        onblur="afterblur(this)"
+      />
+    </div>
+
+    <script>
+      const buttonForClick = document.getElementById("btn");
+      // const buttonTwo = document.getElementById("btn-2");
+      const element = document.createElement("button");
+      element.innerHTML = "this another button";
+
+      buttonForClick.addEventListener("click", function () {
+        alert("button is clicked");
+      });
+
+      function popUp(data) {
+        data.innerHTML = "this is not button";
+        const name = prompt("enter your name");
+        alert(`your name is ${name} `);
+      }
+
+      function getInputdata(data) {
+        console.log(data.value);
+      }
+
+      function afterblur(data) {
+        data.parentNode.children[0].style.color = "yellow";
+      }
+
+      function onFocusInput(data) {
+        data.parentNode.removeChild(data.parentNode.children[1]);
+      }
+    </script>
+  </body>
+</html>

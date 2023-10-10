@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let a = "mukesh"
+      // if(typeof a !== 'string'){
+      //     console.log(a)
+      // }else{
+
+      //     a = a + 1
+      //     console.log(a)
+      // }
+      // let b = 9
+      // if(2+3-6 === 1){
+      //     b += 9;//18
+      //     console.log(b)//18
+      //     b *= 3;//54
+      //     console.log(b)//54
+      // }
+
+      // console.log(b)
+
+      // console.log("2" + 3)
+
+      // for(let i = 100; i>=0;i--){
+
+      //     console.log("hello world")
+      //     console.log("\n")
+
+      // }
+
+      // const personalData = {
+      //     name:"mukesh",
+      //     age:24
+      // }
+
+      // console.log(personalData.name);
+
+      const arry = [45, "name", 23, "age", 48, "ajay", 20, "rakesh"];
+      // console.log(arry[1])
+      // console.log(arry[4])
+      // for(let i = 0; i<arry.length;i++ ){
+      //     if(i%2 !== 0){
+      //         console.log(arry[i])
+      //     }
+      // }
+
+      const newArry = [
+        {
+          playerName: "virat kohli",
+          innings: 102,
+          runs: 150000,
+          strikerate: "67%",
+        },
+        {
+          playerName: "rohit sharma",
+          innings: 102,
+          runs: 140000,
+          strikerate: "38%",
+        },
+        {
+          playerName: "ishan kishan",
+          innings: 60,
+          runs: 1200,
+          strikerate: "40%",
+        },
+        {
+          playerName: "dhoni kishan",
+          innings: 130,
+          runs: 20000,
+          strikerate: "23%",
+        },
+      ];
+
+      // playerName runs innings
+      //    console.log("playerName" + "  " + "runs" + " "+ "innnings")
+      // for(let x = 0;x<newArry.length;x++){
+      //     console.log(newArry[x].playerName + " " +newArry[x].runs + " "+newArry[x].innings)
+      // }
+
+      // 1-100 [2 3 5 7 ]
+
+      let primeNumber = [];
+
+      // number = 13
+
+      //   let number = parseFloat(prompt("enter any value"));
+
+      for (let j = 2; j <= 100; j++) {
+        let number = j;
+        let flag = false;
+        for (let i = 2; i < number; i++) {
+          if (number % i === 0) {
+            flag = true;
+            break;
+          }
+        }
+        if (!flag) {
+          primeNumber.push(j);
+        }
+      }
+
+      //   console.log(primeNumber)
+
+      //   if (flag) {
+      //     console.log("it is not prime number");
+      //   } else {
+      //     console.log("it is primer number");
+      //   }
+      //     let y = -100;
+      // while(y !== 0){
+      //     console.log(y)
+      //     y++;
+      // }
+
+      // let z = 10;
+      // do{
+      //     console.log(z);
+      //     --z;
+
+      // }while(z>1)
+
+      // let expression = prompt("enter any operator")
+      // let a = 10;
+      // let b = 15;
+
+      // switch(expression){
+      //     case "+":
+      //         console.log(a+b);
+      //         break;
+      //     case "-":
+      //         console.log(a-b);
+      //         break;
+      //     case "*":
+      //         console.log(a*b);
+      //         break;
+      //     case "/":
+      //         console.log(a/b);
+      //         break
+      //     case "%":
+      //         console.log(a%b);
+      //         break;
+      //     default:
+      //         console.log("plz enter valid operator");
+      //         break;
+
+      // }
+
+      for (let index = 1; index <= 10; index++) {
+        if (index % 2 !== 0) {
+          continue;
+        }
+        console.log("even number", index);
+      }
+    </script>
+  </body>
+</html>

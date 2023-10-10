@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revision flexbox</title>\
+    <style>
+        .container{
+            border: 2px solid ;
+            height: 100vh;
+            display: flex;
+            /* flex-direction:row; */
+            justify-content:center;
+            align-items:center;
+            flex-flow:row wrap;
+            /* flex-wrap: wrap; */
+            
+            /* align-content:space-evenly; */
+
+        }
+
+        #one{
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+             color: white;
+            font-size: xx-large;
+            order:4;
+            /* flex-grow:4;
+            flex-shrink: 2; */
+            /* flex-basis:400px; */
+            /* align-self:self-end; */
+
+        }
+        
+        #two{
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            color: white;
+            font-size: xx-large;
+            order: 2;
+            /* flex-grow: 4; */
+        }
+
+        #three{
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+             color: white;
+            font-size: xx-large;
+            order: 3;
+            
+        }
+        #four{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+             color: white;
+            font-size: xx-large;
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="one">1</div>
+        <div id="two">2</div>
+        <div id="three">3</div>
+        <div id="four">4</div>
+        <!-- <div id="four">4</div>
+        <div id="four">4</div> -->
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+        <div id="four">4</div>
+    </div>
+</body>
+</html>
