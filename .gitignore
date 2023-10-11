@@ -1,0 +1,13 @@
+node_modules
+manifest.json
+package-lock.json
+.eslintrc.cjs
+react.svg
+vite.svg
+favicon.ico
+logo192.png
+logo512.png
+robots.txt
+logo.svg
+download.jfif
+second.jfif
