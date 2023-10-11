@@ -1,0 +1,13 @@
+
+.card{
+    margin: 4px;
+    width: 30%;
+    height:30rem;
+    display: inline-block;
+    border:2px solid gray;
+}
+
+.cls-img{
+    width: 100%;
+    height: 40vh;
+}

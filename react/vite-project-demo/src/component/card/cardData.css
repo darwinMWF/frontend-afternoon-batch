@@ -1,0 +1,9 @@
+.card-para{
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.dataDiv{
+    height: 200px;
+}

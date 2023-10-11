@@ -1,0 +1,10 @@
+.container{
+    width: 40%;
+    border: 2px solid gray;
+    box-shadow: 10px 5px 5px 5px black;
+}
+
+#gritPara{
+    font-size:2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
