@@ -26,14 +26,22 @@ function Item({ data, isDone }) {
   //   );
 
   // way number 3
-
-  return (
-    <>
-      {isDone && (
+  {/* {isDone && (
         <li>
           {data} <input type="checkbox" checked />
         </li>
-      )}
+      )} */}
+
+  return (
+    <>
+       {isDone ? (
+          <li>
+            {data}
+            <input type="checkbox" defaultChecked />
+          </li>
+        ) : (
+          <li>{data}</li>
+        )}
     </>
   );
 }
