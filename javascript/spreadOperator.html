@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const Arry = [45,23,78,100];
+        const brry = Arry
+        const crry = [...Arry]
+        console.log(Arry)
+        console.log(brry)
+        console.log("crry",crry)
+        const frry = ["mukesh","sukesh"]
+        const drry = [12,23,100,...Arry,...frry];
+        console.log(drry)
+
+        const obj = {
+            name:"sukesh",
+            age:25
+        }
+
+        const bloodData = {
+            blodGrp :"O+",
+            name:"mukesh",
+            ...obj
+        }
+
+        console.log(bloodData)
+    </script>
+</body>
+</html>
