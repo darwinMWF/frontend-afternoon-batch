@@ -73,11 +73,18 @@
 <input type="text" onChange={HandleChange} />
 {name} */
 }
-import Cardlist from "./component/card/cardlist";
-import { useState } from "react";
-import Sculpture from "./component/sculpture/sculpture";
+// import Cardlist from "./component/card/cardlist";
+// import Sculpture from "./component/sculpture/sculpture";
 // hooks - reacts in built function to manage state
 // state -  a data can changeable
+
+import { useState, useEffect } from "react";
+import { data } from "./arry";
+import InputItem from "./component/form/form";
+
+const ArryData = data.map((item) => {
+  return <li key={item.id}>{item.title}</li>;
+});
 
 function App() {
   // let sum = 0;
@@ -88,12 +95,25 @@ function App() {
   const [sum, setSum] = useState(0);
   const [myData, setData] = useState({ name: "mueksh", age: 25 });
   const [number, setNumber] = useState(0);
-  console.log(sum);
+  const [Arry, setArry] = useState(ArryData);
+
+  // console.log(sum);
+
+  useEffect(function () {
+    // console.log("hello world")
+    // const newAry =[...Arry]
+    // console.log(newAry)
+    const data = fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }, []);
+
+  // useEffect(function,dependecyArry)
 
   function handlePlus() {
     if (sum != 10) {
-      setSum(function(value){
-        return value+1
+      setSum(function (value) {
+        return value + 1;
       });
     }
   }
@@ -105,8 +125,43 @@ function App() {
   }
 
   function handleChange() {
-    setData({ ...myData, name: "ajay", age: 48 });
+    const userName = prompt("enter your name");
+    const userAge = prompt("enter your age");
+    setData({ ...myData, name: userName, age: userAge });
   }
+
+  function handleTodo() {
+    const filterdData = data.filter(function (item) {
+      if (item.completed === true) {
+        return item;
+      }
+    });
+
+    const newdata = filterdData.map((item) => {
+      return <li key={item.id}>{item.title}</li>;
+    });
+
+    setArry([...newdata]);
+  }
+
+  function AllHandles() {
+    setArry([...ArryData]);
+  }
+
+  function handleNotfiltered() {
+    const filterdData = data.filter(function (item) {
+      if (item.completed === false) {
+        return item;
+      }
+    });
+
+    const newdata = filterdData.map((item) => {
+      return <li key={item.id}>{item.title}</li>;
+    });
+
+    setArry([...newdata]);
+  }
+
   return (
     <>
       {/* state management */}
@@ -130,11 +185,14 @@ function App() {
       {/* <Sculpture /> */}
       {/* <h1>{myData.name}</h1>
       <p>{myData.age}</p>
-      <button onClick={handleChange}>changeData</button> */}
+      <button onClick={handleChange}>changeData</button>
 
       <h1>{number}</h1>
       <button
         onClick={() => {
+          setNumber(number+1);
+          setNumber(number+1);
+          setNumber(number+1);
           setNumber(function (oldValues) {
             return oldValues + 1;
           });
@@ -150,7 +208,15 @@ function App() {
         }}
       >
         +3
-      </button>
+      </button> */}
+
+      <button onClick={AllHandles}>all</button>
+      <button onClick={handleTodo}>filtered</button>
+      <button onClick={handleNotfiltered}>notFiltered</button>
+      {Arry}
+
+      {/* <InputItem />
+      <InputItem /> */}
     </>
   );
 }
