@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- regx
+    regular expression
+    abc -->
+    <form id="form">
+      <p>
+        <label for="Name">Name</label>
+        <input
+          type="text"
+          id="Name"
+          onblur="handleChange(this)"
+          oninput="handleChange(this)"
+        />
+        <span></span>
+      </p>
+      <p>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          onblur="handleChange(this)"
+          oninput="handleChange(this)"
+        />
+        <span></span>
+      </p>
+      <p>
+        <label for="password">password</label>
+        <input
+          type="password"
+          id="password"
+          onblur="handleChange(this)"
+          oninput="handleChange(this)"
+        />
+        <span></span>
+      </p>
+      <p>
+        <label for="confirm-password">Confirm-password</label>
+        <input
+          type="password"
+          id="confirm-password"
+          onchange="handleConfirmPassword(this)"
+          oninput="handleChange(this)"
+        />
+        <span></span>
+      </p>
+
+      <button type="submit">submit</button>
+    </form>
+    <script>
+      // const pattern = /abc/
+      // const re = new RegExp("ab+c");
+      // const TextInput = document.getElementById("input")
+      const password = document.getElementById("password");
+      const form = document.getElementById("form");
+
+      const NameRgex =
+        /((?=.*_)^[a-zA-Z][a-zA-Z\s_]{1,18}[a-zA-Z]$)|((?!.*_)^[a-zA-Z][a-zA-Z\s]{1,19}$)/;
+
+      const EmailRgex =
+        /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+      const passwordRgex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+      function handleChange(event) {
+        event.parentNode.children[2].textContent = "";
+        switch (event.type) {
+          case "text":
+            {
+              if (event.value.length !== 0) {
+                const isValidate = NameRgex.test(event.value);
+                if (!isValidate) {
+                  event.parentNode.children[2].textContent =
+                    "name should be consist minimun 4 character";
+                }
+              } else {
+                event.parentNode.children[2].textContent = "required";
+              }
+            }
+            break;
+          case "email":
+            {
+              if (event.value.length !== 0) {
+                const isValidate = EmailRgex.test(event.value);
+                if (!isValidate) {
+                  event.parentNode.children[2].textContent =
+                    "email is not valid";
+                }
+              } else {
+                event.parentNode.children[2].textContent = "required";
+              }
+            }
+            break;
+          case "password":
+            {
+              if (event.value.length !== 0) {
+                const isValidate = passwordRgex.test(event.value);
+                if (!isValidate) {
+                  event.parentNode.children[2].textContent =
+                    "password should content Minimum 8 characters, at least 1 letter and 1 number";
+                }
+              } else {
+                event.parentNode.children[2].textContent = "required";
+              }
+            }
+            break;
+        }
+      }
+
+      function handleConfirmPassword(event) {
+        event.parentNode.children[2].textContent = "";
+        if (event.value.lenght !== 0) {
+          if (password.value !== event.value) {
+            event.parentNode.children[2].textContent = "password not match";
+          }
+        } else {
+          event.parentNode.children[2].textContent = "required";
+        }
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        for (let key of event.target) {
+          if (key.type !== "submit") {
+            if (key.value.length === 0) {
+              key.parentNode.children[2].textContent = "required";
+            }
+          }
+        }
+      }
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
