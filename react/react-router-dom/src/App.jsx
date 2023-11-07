@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Nav } from "./component/navibar/nav";
 import { Profile } from "./pages/user/userProfile";
+import { Register } from "./pages/auth/registerFom";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -24,9 +25,7 @@ function App() {
         <Route
           path="/register"
           element={
-            <>
-             <h1>this is register</h1>
-            </>
+            <Register/>
           }
         />
         <Route

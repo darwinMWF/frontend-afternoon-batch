@@ -2,55 +2,68 @@
 <html lang="en">
   <head>
     <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+      .error{
+        border: 1px solid red;
+      }
+    </style>
   </head>
-  <body>
+  <body class="" >
     <!-- regx
     regular expression
     abc -->
+    <main style="max-width:400px;" class="border rounded p-3 mx-auto my-5 shadow">
+      <h1 class="h1 text-dark-emphasis text-center">Registration form</h1>
     <form id="form">
       <p>
-        <label for="Name">Name</label>
+        <label for="Name" class="form-label">Name</label>
         <input
           type="text"
           id="Name"
+          class="form-control"
           onblur="handleChange(this)"
           oninput="handleChange(this)"
         />
-        <span></span>
+        <span class="text-danger"></span>
       </p>
       <p>
-        <label for="email">Email</label>
+        <label for="email" class="form-label">Email</label>
         <input
           type="email"
           id="email"
+          class="form-control"
           onblur="handleChange(this)"
           oninput="handleChange(this)"
         />
-        <span></span>
+        <span class="text-danger"></span>
       </p>
       <p>
-        <label for="password">password</label>
+        <label for="password" class="form-label">password</label>
         <input
           type="password"
           id="password"
+          class="form-control"
           onblur="handleChange(this)"
           oninput="handleChange(this)"
         />
-        <span></span>
+        <span class="text-danger"></span>
       </p>
       <p>
-        <label for="confirm-password">Confirm-password</label>
+        <label for="confirm-password" class="form-label">Confirm-password</label>
         <input
           type="password"
           id="confirm-password"
+          class="form-control"
           onchange="handleConfirmPassword(this)"
           oninput="handleChange(this)"
         />
-        <span></span>
+        <span class="text-danger"></span>
       </p>
 
-      <button type="submit">submit</button>
+      <button class="btn btn-primary" type="submit">submit</button>
     </form>
+  </main>
     <script>
       // const pattern = /abc/
       // const re = new RegExp("ab+c");
@@ -68,16 +81,19 @@
 
       function handleChange(event) {
         event.parentNode.children[2].textContent = "";
+        event.classList.remove("error")
         switch (event.type) {
           case "text":
             {
               if (event.value.length !== 0) {
                 const isValidate = NameRgex.test(event.value);
                 if (!isValidate) {
+                  event.classList.add("error")
                   event.parentNode.children[2].textContent =
-                    "name should be consist minimun 4 character";
+                    "name should be consist minimun 1 character";
                 }
               } else {
+                event.classList.add("error")
                 event.parentNode.children[2].textContent = "required";
               }
             }
@@ -89,9 +105,11 @@
                 if (!isValidate) {
                   event.parentNode.children[2].textContent =
                     "email is not valid";
+                    event.classList.add("error")
                 }
               } else {
                 event.parentNode.children[2].textContent = "required";
+                event.classList.add("error")
               }
             }
             break;
@@ -105,6 +123,7 @@
                 }
               } else {
                 event.parentNode.children[2].textContent = "required";
+                event.classList.add("error")
               }
             }
             break;
@@ -116,22 +135,35 @@
         if (event.value.lenght !== 0) {
           if (password.value !== event.value) {
             event.parentNode.children[2].textContent = "password not match";
+            event.classList.add("error")
           }
         } else {
           event.parentNode.children[2].textContent = "required";
+          event.classList.add("error")
         }
       }
 
       function handleSubmit(event) {
         event.preventDefault();
+        let flag = false;
 
         for (let key of event.target) {
           if (key.type !== "submit") {
             if (key.value.length === 0) {
               key.parentNode.children[2].textContent = "required";
+              key.classList.add("error")
+              flag = true;
             }
           }
         }
+
+        if(flag){
+          return
+        }
+
+        event.target.reset();
+
+
       }
       form.addEventListener("submit", handleSubmit);
     </script>
